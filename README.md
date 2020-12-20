@@ -1,74 +1,49 @@
 https://medium.com/swlh/what-is-a-technology-stack-choosing-the-right-tech-stack-for-your-web-project-3f295cf60f10
 
-### Tech Stack
+## 📂&nbsp; 프로젝트 이름 (Project Name)
 
-HTML5, CSS, JavaScript
+### AI+ Face Recognition Project
 
-#### UI Framework and Libraries: ReactJS, Node.js
+[Application Logo]
 
-## Project Requirements and Features
+본 프로젝트는 AI 라이브러리를 활용하여 업로드한 사진을 분석하기 위한 웹 애플리케이션 입니다. BackEnd는 JavaScript와 NodeJS로 사용하였으며, FrontEnd에는 JavaScript와 ReactJS를 사용하여 개발하였습니다. <br/>
+(This project is a web application for analyzing uploaded photos using an AI library. BackEnd was developed using JavaScript and NodeJS, and FrontEnd was developed using JavaScript and ReactJS.)<br/>
+<br/>
+<br/>
 
-## Project Name & Pitch
+<hr/>
+<br/>
 
-#### Example:
+## 👨‍💻&nbsp;사용된 기술스택 (Used Tech Stack)
 
-TweetWorld
+#### Front-End : HTML5, CSS, JavaScript
 
-An application used to filter data form Twitter based on user preference, built with React, Redux, JavaScript, and CSS.
+#### Back-End : JavaScript, NodeJS
 
-## Project Status
+#### Database : -
 
-(only necessary if incomplete)
+#### Test : -
 
-#### Example:
+#### UI Framework and Libraries: ReactJS with Hooks
 
-This project is currently in development. Users can filter tweets by username and keyword and see visual data representation. Functionality to sort by additional parameters is in progress.
+#### Library : Clarifai (Computer Vision and Artificial Intelligence)(https://www.clarifai.com/)
 
-## Project Screen Shot(s)
+## 🖼️&nbsp; 프로젝트 와이어프레임 (Project Wireframe)
 
-#### Example:
-
-[ PRETEND SCREEN SHOT IS HERE ]
-
-[ PRETEND OTHER SCREEN SHOT IS HERE ]
-
-## Installation and Setup Instructions
-
-#### Example:
-
-Clone down this repository. You will need `node` and `npm` installed globally on your machine.
-
-Installation:
-
-`npm install`
-
-To Run Test Suite:
-
-`npm test`
-
-To Start Server:
-
-`npm start`
-
-To Visit App:
-
-`localhost:3000/ideas`
-
-## Reflection
-
-- What was the context for this project? (ie: was this a side project? was this for Turing? was this for an experiment?)
-- What did you set out to build?
-- Why was this project challenging and therefore a really good learning experience?
-- What were some unexpected obstacles?
-- What tools did you use to implement this project?
-  - This might seem obvious because you are IN this codebase, but to all other humans now is the time to talk about why you chose webpack instead of create react app, or D3, or vanilla JS instead of a framework etc. Brag about your choices and justify them here.
-
-#### Example:
-
-This was a 3 week long project built during my third module at Turing School of Software and Design. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.
-
-Originally I wanted to build an application that allowed users to pull data from the Twitter API based on what they were interested in, such as 'most tagged users'. I started this process by using the `create-react-app` boilerplate, then adding `react-router-4.0` and `redux`.
-
-One of the main challenges I ran into was Authentication. This lead me to spend a few days on a research spike into OAuth, Auth0, and two-factor authentication using Firebase or other third parties. Due to project time constraints, I had to table authentication and focus more on data visualization from parts of the API that weren't restricted to authenticated users.
-
-At the end of the day, the technologies implemented in this project are React, React-Router 4.0, Redux, LoDash, D3, and a significant amount of VanillaJS, JSX, and CSS. I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into weird technological rabbit holes. In the next iteration I plan on handrolling a `webpack.config.js` file to more fully understand the build process.
+<table>
+    <tr>
+        <td>
+            <img src = "imgs/main_page.png" alt="Markdown Monster icon" style="height: 300px; width:400px; float: left; margin-right: 10px;"/>
+        </td>
+        <td>
+            <img src = "imgs/detail_page.png" alt="Markdown Monster icon" style="height: 300px; width:400px; float: left; margin-right: 10px;"/>
+        </td>
+    </tr>
+    <tr>
+        <td style="text-align:center">Main page</td>
+        <td style="text-align:center">- page</td>
+    </tr>
+</table>
+<br/>
+<hr/>
+<br/>
