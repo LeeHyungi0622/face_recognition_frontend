@@ -27,7 +27,7 @@ class Signin extends React.Component {
         // post method
         // back-end로 데이터를 보낼때, javascript object를 직접적으로 보낼 수 없다.
         // javascript object를 JSON.stringify로 변환해서 보내줘야 한다.
-        fetch('http://localhost:4000/signin', {
+        fetch('http://localhost:4002/signin', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -36,8 +36,9 @@ class Signin extends React.Component {
             })
         })
         .then(response => response.json())
-        .then(data => {
-            if(data === 'success'){
+        .then(user => {
+            if(user.id){
+                this.props.loadUser(user);
                 this.props.onRouteChange('home');
             }
         })
