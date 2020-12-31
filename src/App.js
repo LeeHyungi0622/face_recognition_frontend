@@ -8,10 +8,6 @@ import Rank from "./components/Rank/Rank";
 import Signin from "./components/Signin/Signin";
 import Register from "./components/Register/Register";
 import './App.css';
-import Clarifai from "clarifai";
-
-const api_key = "781101ee50fd412cbca37cd7701fd894"
-const app = new Clarifai.App({apiKey: api_key})
 
 
 const particlesOptions = {
@@ -24,7 +20,10 @@ const particlesOptions = {
       }
     },
     color: {
-      value: "#ffffff"
+      value: "#d9c31d"
+    },
+    line_linked: {
+      color: "#304ccf"
     }
   }
 }
@@ -86,12 +85,17 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({imageUrl: this.state.input})
-    app.models.predict(
-      Clarifai.FACE_DETECT_MODEL, 
-      this.state.input)
+    fetch('https://glacial-atoll-71260.herokuapp.com/imageurl', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+          input: this.state.input
+      })
+    })
+    .then(response => response.json())
     .then((response) => {
         if (response) {
-          fetch('http://localhost:4002/image', {
+          fetch('https://glacial-atoll-71260.herokuapp.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -131,7 +135,6 @@ class App extends Component {
         { route === 'home'?
           (
             <>
-              <Logo />
               <Rank name={name} entries={entries} />
               <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onPictureSubmit}/>
               <FaceRecognition box={box} imageURL={imageUrl}/>
